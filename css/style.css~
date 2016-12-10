@@ -1,0 +1,104 @@
+header,nav,section,article,aside,footer,time{display:block;}
+html *{margin:0;padding:0;}
+html{height:100%}
+body{min-height:100%;min-width:1000px;  font-family: 'fontmine'; font-size:14px;background:#fff;color:#000;position:relative;}
+img{vertical-align:bottom;border:0;}
+
+/* fonts */
+@font-face {
+	font-family: 'fontmine';
+	src: url('../fonts/mgs65_-webfont.eot');
+	src: local('O'),
+	url('../fonts/mgs65_-webfont.woff') format('woff'),
+	url('../fonts/mgs65_-webfont.ttf') format('truetype'),
+	url('../fonts/mgs65_-webfont.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;}
+/* /fonts*/
+
+
+/* helping adds*/
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: '';
+}
+
+.clearfix:after {
+	clear: both;
+}
+.clear{clear:both;font-size:1px;line-height:1px;height:0;overflow:hidden;}
+.juster{display:inline-block;width:100%;height:0;overflow:hidden;}
+.vfix{height:100%;width:0px;display:inline-block;vertical-align:middle;}
+
+/* /helping adds*/
+
+/* base styles*/
+/* /base styles */
+
+
+/* icons styling*/
+
+/* /icons styling*/
+
+/* links styling*/
+/* /links styling*/
+
+/* base typo*/
+h1,h2,h3,h4,h5,.mainheading,.subheading,.thirdheading,.fourheading,.fiveheading{font-weight:normal;}
+a{}
+a:hover{}
+p{margin:0;}
+.mainheading,.ctext h1{}
+.subheading,.ctext h2{ }
+
+.thirdheading,.ctext h3{}
+.fourheading,.ctext h4{}
+.fiveheading,.ctext h5{}
+.ctext hr{}
+
+
+
+/*base ctext styling*/
+.ctext {}
+.ctext p{margin: 0.8em 0;}
+.ctext a{}
+.ctext ul{margin: 0.8em 0;}
+.ctext ul li{list-style:none; padding:0 0 0 13px; margin:0 0 5px 30px; position:relative;}
+.ctext ul li:before{content:'\2022';display:block;position:absolute; left:0; color:#429103; font-size:0.8em;}
+.ctext ol{counter-reset: point; }
+.ctext ol li{list-style:none;padding:0 0 0 14px; position:relative;} 
+.ctext ol li:before{  content:counter(point)'.'; /* выводим значение переменной */counter-increment:point 1; /* увеличваем счетчик на 1 */ position: absolute;  left: 0;color:#e32636;}
+.ctext ul.pinklist li:before{color:#ba419e;}
+
+
+
+
+/* /base typo*/
+
+
+/* /wraps styling*/
+
+.header{height:310px;position:relative ; z-index:3;}
+
+.all-box{width:960px; min-height: 700px; margin:0 auto;position:relative; display:block;}
+
+/* common blocks */
+
+
+.main{ position:relative; z-index:2; padding:30px 0 30px 0; background:url('../images/mainshadow.png') no-repeat center 2px;}
+.main .sidebar_w{width: 30.03%;float:left; margin: 0 1.5%;}
+.main .sidebar{margin:0;}
+
+.main .content_w{float:left;width:63.6%;margin: 0 1.5%;}
+.main .content{margin:0;}
+
+
+
+
+.footer_placeholder{height:0;}
+.footer{position:absolute;bottom:0;left:0;width:100%;z-index:1;overflow:hidden;color:#646464;}
+
+
+ 

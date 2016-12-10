@@ -94,7 +94,6 @@ $(document).ready(function(){
 	});
 	
 	function particularCourse(source){
-		console.log(source);
 		let arrCourse= ['Front-end', 'Web Design', 'QA', 'Digital Marketing', 'Startup Business', 'Back-end', 'JavaScript', 'C#','IT teens'];
 		let $box= $('.course-select').eq(1).children('ul');
 		$box.children().remove();
@@ -115,6 +114,8 @@ $(document).ready(function(){
 		parent.removeClass('is_open');
 		$('.course-select__title',parent).html($(this).html());
 		messageObj.city = $(this).html();
+		messageObj.cityId = $(this).attr('data-source1');
+		console.log(messageObj.cityId);
 		$('#entry_296294519').val($(this).text());
 		var source= $(this).attr('data-source1');
 		particularCourse(source);
@@ -132,15 +133,17 @@ $(document).ready(function(){
 		autoCenter : false
 	});
 	$('.form form').validate({
-		submitHandler: function(form) {
+		submitHandler: function(form, source) {
 	    // some other code
 	    // maybe disabling submit button
 	    // then:
 	    data = $(form).serialize();
+	    id= messageObj.cityId;
+	    city= messageObj.city;
 	    $.ajax({
 	    	type: "POST",
-	    	url: $(form).attr('action'),
-	    	data: data
+	    	url: 'actionCity',
+	    	data: data&id&city
 	    });
 	    $.fancybox.close();
 	    $.fn.shuttleLoad(function(){$('#shuttle').shuttleFly()},3100);
